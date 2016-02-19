@@ -1,0 +1,3 @@
+[submodule "WellManagedDataAccess"]
+	path = WellManagedDataAccess
+	url = https://github.com/sharad2/WellManagedDataAccess.git
