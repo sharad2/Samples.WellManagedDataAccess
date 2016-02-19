@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using HappyOracle.WellManagedDataAccess.Helpers.XPath;
+using HappyOracle.WellManagedDataAccess.XPath;
 
 namespace WellManagedDataAccessUnitTests
 {

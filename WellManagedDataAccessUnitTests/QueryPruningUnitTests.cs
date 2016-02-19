@@ -5,6 +5,7 @@ using System.Xml;
 using HappyOracle.WellManagedDataAccess.Helpers;
 using System.Collections.Generic;
 using System.Linq;
+using HappyOracle.WellManagedDataAccess.XPath;
 
 namespace WellManagedDataAccessUnitTests
 {
