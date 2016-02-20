@@ -355,8 +355,8 @@ FROM DUAL
             ";
 
             var interval_input = TimeSpan.FromHours(52);
-            var binder = WCommand.Create(QUERY, row => row.GetIntervalDS("interval_output"))
-                .ParameterIntervalDS("interval_input", interval_input);
+            var binder = WCommand.Create(QUERY, row => row.GetTimeSpan("interval_output"))
+                .Parameter("interval_input", interval_input);
 
             var interval_output = binder.ExecuteSingle(__db);
 
@@ -373,12 +373,26 @@ FROM DUAL
             ";
 
             //var interval_input = TimeSpan.FromHours(52);
-            var binder = WCommand.Create(QUERY, row => row.GetIntervalYM(0));
+            var binder = WCommand.Create(QUERY, row => row.GetLong(0));
 
             var interval_output = binder.ExecuteSingle(__db);
 
             Assert.AreEqual(123 * 12 + 2, interval_output);
-           // Assert.Inconclusive(interval_output.ToString());
+            // Assert.Inconclusive(interval_output.ToString());
+        }
+
+        [TestMethod]
+        public void TestMethod1()
+        {
+            //var cmd = WCommand.Create("select col1, col2 from t", row => new
+            //{
+            //    MyString = row.GetString("col1"),
+            //    MyInt = row.GetInteger("col2")
+            //});
+
+            var cmd = WCommand.Create("delete from t where id = :id", 10);
+            
+
         }
     }
 }
